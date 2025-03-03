@@ -2,11 +2,14 @@ import * as express from 'express';
 import * as cors from 'cors';
 import * as dotenv from 'dotenv';
 
+import guardarDatos from './routes/guardarDatosRoute'
+
 dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use('/guardarDatos', guardarDatos)
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
