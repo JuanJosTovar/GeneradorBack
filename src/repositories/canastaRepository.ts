@@ -1,5 +1,5 @@
-import db from "../config/db"
 import Canasta from "../Dto/canastaDto";
+import db from "../config/db"
 
 class CanastaRepository{
     static async insertarCanasta(canasta: Canasta) {
