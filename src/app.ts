@@ -7,10 +7,14 @@ import guardarDatos from './routes/guardarDatosRoute'
 
 import registrarUbicacion from './routes/registrarUbicacionRoute'
 
+import traerCanastasPedido from './routes/traerCanastasPedido';
+
 dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+app.use('/traerCanastasPedido', traerCanastasPedido)
 
 
 app.use('/guardarDatos', guardarDatos)
