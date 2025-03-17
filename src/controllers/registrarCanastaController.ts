@@ -7,7 +7,6 @@ export const registrarCanasta: RequestHandler = async (req: Request, res: Respon
     const { codigo, nombre } = req.body;
     const canasta: Canasta = new Canasta(codigo, nombre);
     await CanastaService.registrarCanasta(canasta);
-    // Llama a res.status().send() sin return
     res.status(201).send({ status: 'register ok' });
   } catch (error) {
     console.error("Error al registrar canasta:", error);
