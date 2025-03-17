@@ -12,7 +12,7 @@ const db = mysql.createPool({
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
-  connectTimeout: 10000 // Aumenta el tiempo de espera a 10 segundos
+  connectTimeout: 30000 // Aumenta el tiempo de espera a 10 segundos
 });
   
 export default db.promise()

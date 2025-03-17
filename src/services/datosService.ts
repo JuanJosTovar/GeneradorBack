@@ -2,7 +2,7 @@ import DatosGuardados from "../Dto/datosGuardadosDto";
 import  DatosRepository  from "../repositories/datosRepository";
 
 
-class ReferenciaService{
+class DatosService{
     static async guardarDatos(datos:DatosGuardados){
         try {
             const resultado = await DatosRepository.insertarDatos(datos);
@@ -14,4 +14,4 @@ class ReferenciaService{
     }
 }
 
-export default ReferenciaService;
+export default DatosService;

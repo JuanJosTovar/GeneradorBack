@@ -1,7 +1,7 @@
 import DatosGuardados from "../Dto/datosGuardadosDto";
 import db from "../config/db";
 
-class ReferenciaRepository {
+class DatosRepository {
     static async insertarDatos(datos: DatosGuardados) {
         const sql = 'CALL insertarHistorialStock(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
         const values = [
@@ -47,4 +47,4 @@ class ReferenciaRepository {
     }
 }
 
-export default ReferenciaRepository;
+export default DatosRepository;
