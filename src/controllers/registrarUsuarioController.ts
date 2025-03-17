@@ -7,9 +7,10 @@ export const registrarUsuario: RequestHandler = async (req: Request, res: Respon
     const { 
         nombres, 
         apellidos,
-        password
+        password,
+        nombre_usuario
     } = req.body;
-    const usuario: Usuario = new Usuario(nombres, apellidos, password);
+    const usuario: Usuario = new Usuario(nombres, apellidos, password, nombre_usuario);
     await UserService.registrarUsuario(usuario);
 
     res.status(201).send({ status: 'register ok' });
